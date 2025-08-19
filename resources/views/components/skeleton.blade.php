@@ -32,13 +32,14 @@
                 <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="h-8 w-auto" />
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
-                <div class="flex space-x-4">
-                    <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-                    <a href="/about" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">About</a>
-                    <a href="/contact" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</a>
-                    <a href="/team" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
-                    <a href="/version" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Version</a>
-                </div>
+                    <div class="flex space-x-4">
+                        <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                        <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+                        <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
+                        <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+                        <x-nav-link href="/team" :active="request()->is('team')">Team</x-nav-link>
+                        <x-nav-link href="/version" :active="request()->is('version')">Version</x-nav-link>
+                    </div>
                 </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
