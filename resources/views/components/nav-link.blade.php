@@ -1,0 +1,1 @@
+<li><a href="/{{ lcfirst($slot) ?? "" }}">@if ($slot == "") home @else {{ $slot }} @endif</a></li>
