@@ -11,3 +11,5 @@ Route::get('/about', function() {
 });
 
 Route::get('/contact', fn() => view('contact') );
+
+Route::get('/team', fn() => view('team'));
