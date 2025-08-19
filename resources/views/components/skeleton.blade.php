@@ -14,6 +14,8 @@
                 <x-nav-link href="/about">About</x-nav-link>
                 <x-nav-link href="/contact">Contact</x-nav-link>
                 <x-nav-link href="/team">Team</x-nav-link>
+                <x-nav-link href="/version">Version</x-nav-link>
+                
             </ul>
         </nav>
     </header>
