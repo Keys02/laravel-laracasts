@@ -2,5 +2,5 @@
     <x-slot:heading>
         Version Page
     </x-slot:heading>
-    <h1>Hello from the versions</h1>
+    <h1>Hello from the version page</h1>
 </x-skeleton>
