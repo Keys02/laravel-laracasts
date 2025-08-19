@@ -18,7 +18,7 @@
         </nav>
     </header>
     <main>
-    <h1>Hello from the homepage</h1>
+        {{ $slot }}
     </main>
     <footer></footer>
 </body>
