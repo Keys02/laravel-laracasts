@@ -10,10 +10,10 @@
     <header>
         <nav>
             <ul>
-                <x-nav-link></x-nav-link>
-                <x-nav-link>About</x-nav-link>
-                <x-nav-link>Contact</x-nav-link>
-                <x-nav-link>Team</x-nav-link>
+                <x-nav-link href="/">Home</x-nav-link>
+                <x-nav-link href="/about">About</x-nav-link>
+                <x-nav-link href="/contact">Contact</x-nav-link>
+                <x-nav-link href="/team">Team</x-nav-link>
             </ul>
         </nav>
     </header>
