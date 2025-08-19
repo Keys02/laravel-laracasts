@@ -2,5 +2,9 @@
     <x-slot:heading>
         Home Page
     </x-slot:heading>
-    <h1>Hello from the homepage</h1>
+    <ul style="list-style-type: none;">
+        @foreach ($books as $book)
+            <li>{{ $book['title'] }} is written by {{ $book['author'] }}</li>
+        @endforeach
+    </ul>
 </x-skeleton>

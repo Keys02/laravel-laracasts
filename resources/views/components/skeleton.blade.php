@@ -33,11 +33,11 @@
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4">
-                        <x-nav-link href="/" :active="request()->is('/')" type="a">Home</x-nav-link>
-                        <x-nav-link href="/about" :active="request()->is('about')" type="a">About</x-nav-link>
-                        <x-nav-link href="/contact" :active="request()->is('contact')" type="a">Contact</x-nav-link>
-                        <x-nav-link href="/team" :active="request()->is('team')" type="button">Team</x-nav-link>
-                        <x-nav-link href="/version" :active="request()->is('version')" type="button">Version</x-nav-link>
+                        <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+                        <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
+                        <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+                        <x-nav-link href="/team" :active="request()->is('team')">Team</x-nav-link>
+                        <x-nav-link href="/version" :active="request()->is('version')">Version</x-nav-link>
                     </div>
                 </div>
             </div>

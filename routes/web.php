@@ -3,7 +3,22 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "books" => [
+            [
+                "title" => "Deep Work",
+                "author" => "Cal Newport"
+            ],
+            [
+                "title" => "Meditations",
+                "author" => "Marcus Aurelius"
+            ],
+            [
+                "title" => "Limitless",
+                "author" => "Jim Kwik"
+            ],
+        ]
+    ]);
 });
 
 Route::get('/about', fn() => view('contact') );
