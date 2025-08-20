@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('book_listings', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->foreignIdFor(\App\Models\Author::class);
+        Schema::create('authors', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('author_name');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('book_listings');
+        Schema::dropIfExists('authors');
     }
 };

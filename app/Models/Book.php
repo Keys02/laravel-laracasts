@@ -7,5 +7,9 @@ class Book extends Model
 {
     protected $table = "book_listings";
 
-    protected $fillable = ['title', 'author'];
+    protected $fillable = ['title', 'author_id'];
+
+    public function author() {
+        return $this->belongsTo(Author::class);
+    }
 }
