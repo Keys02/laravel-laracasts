@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Models\Book;
+use App\Models\Author;
 
 Route::get('/', function () {
     return view('home');
@@ -8,13 +9,15 @@ Route::get('/', function () {
 
 Route::get('/books', function() {
     return view('books', [
-        "books" => Book::all()
+        "books" => Book::all(),
+        "authors" => Author::all()
     ]);
 });
 
 Route::get('/book/{id}', function($id) {
     $book = Book::find($id);
-    return view('book', ["book" => $book]);
+    $author = Book::find($id);
+    return view('book', ["book" => $book, "author" => $author]);
 });
 
 Route::get('/about', fn() => view('about') );
