@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Laravel-Laracasts</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="h-full">
@@ -38,6 +38,7 @@
                         <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
                         <x-nav-link href="/team" :active="request()->is('team')">Team</x-nav-link>
                         <x-nav-link href="/version" :active="request()->is('version')">Version</x-nav-link>
+                        <x-nav-link href="/books" :active="request()->is('books')">Books</x-nav-link>
                     </div>
                 </div>
             </div>
