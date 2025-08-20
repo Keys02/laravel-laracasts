@@ -1,7 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Arr;
-
+use App\Models\Book;
 
 Route::get('/', function () {
     return view('home');
@@ -9,49 +8,12 @@ Route::get('/', function () {
 
 Route::get('/books', function() {
     return view('books', [
-        "books" => [
-            [
-                "id" => 1,
-                "title" => "Deep Work",
-                "author" => "Cal Newport"
-            ],
-            [
-                "id" => 2,
-                "title" => "Meditations",
-                "author" => "Marcus Aurelius"
-            ],
-            [
-                "id" => 3,
-                "title" => "Limitless",
-                "author" => "Jim Kwik"
-            ],
-        ]
+        "books" => Book::all()
     ]);
 });
 
 Route::get('/book/{id}', function($id) {
-    $books = [
-            [
-                "id" => 1,
-                "title" => "Deep Work",
-                "author" => "Cal Newport"
-            ],
-            [
-                "id" => 2,
-                "title" => "Meditations",
-                "author" => "Marcus Aurelius"
-            ],
-            [
-                "id" => 3,
-                "title" => "Limitless",
-                "author" => "Jim Kwik"
-            ],
-        ];
-
-    $book = Arr::first($books, fn($book) => $id == $book['id']);
-
-    // dd($book);
-
+    $book = Book::find($id);
     return view('book', ["book" => $book]);
 });
 
